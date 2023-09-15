@@ -1,3 +1,45 @@
+# Research project: Reversal of vehicle trajectory vectors
+
+## Introduction
+
+Deep learning of embedding vector representations of vehicle trajectories is currently very popular because the similarity between different vehicle trajectories is very difficult to compute by traditional methods, whereas if an efficient vector representation of vehicle trajectories is obtained using deep learning, it can be computed directly using existing methods for computing the similarity between vectors. However, such deep learning cannot be guaranteed in terms of security, because there is the same possibility of deep learning, which reverses the original vehicle driving trajectory by inputting the output of the above deep learning network, which makes the original data leakage.
+
+And it is the possibility of this idea that I have explored in this research project. By using publicly available urban vehicle trajectory data and some already open-source deep learning models of vehicle trajectory embedding vectors, first we obtained the outputs of these networks. Subsequently, I constructed simple RNN (LSTM/GRU, etc.) models and tried to invert the obtained outputs, thus obtaining the approximate original trajectory, which was then able to be compared with the original trajectory.
+
+An example of one comparison is shown below:
+
+![image-20230826161420503](image-20230826161420503.png)
+
+We were able to find that by simply reversing deep learning, we were able to get the original approximate path back from the output of a commonly used deep learning network.
+
+## Experimental validation
+
+In order to further quantitatively verify the effectiveness of the reversal network, we validated the model performance using the following common quantities.
+
++ Recall rate and Precision rate.
+
+  ![image-20230915164040659](OUTPUT1.png) !
+
+  ![image-20230915164159309](OUTPUT2.png)
+
++ Frechet distance, Hausdorff distance (and their corresponding normalised forms)
+
+  **`Frechet distance` **
+
+  ![image-20230915164306493](OUTPUT3.png)
+
+  **Frechet distance (standardised form) = $1000*\frac{frec\_distance}{diameters}$** !
+
+  ![image-20230915164712686](OUTPUT4.png)
+
+  **`Hausdorff distance`** !
+
+  ![image-20230915164940331](OUTPUT5.png)
+
+  **Hausdorff distance (standard form) = $1000*\frac{Hausdorff\_distance}{diameters}$** !
+
+  ![image-20230915165134361](OUTPUT6.png)
+
 # 科研项目：车辆行驶轨迹向量的逆转
 
 
@@ -13,3 +55,31 @@
 ![image-20230826161420503](image-20230826161420503.png)
 
 我们能够发现，通过简单的逆转深度学习，能够从常用深度学习网络的输出中回复得到原有的大致路径。
+
+## 实验验证
+
+为了进一步定量地验证该逆转网络地效果，我们使用以下的一些常用量进行了模型性能的验证:
+
++ Recall率以及Precision率
+
+  ![image-20230915164040659](OUTPUT1.png)
+
+  ![image-20230915164159309](OUTPUT2.png)
+
++ Frechet距离、Hausdorff距离（及其相应标准化形式）
+
+  **`Frechet距离`**
+
+  ![image-20230915164306493](OUTPUT3.png)
+
+  **Frechet距离（标准形式）=$1000*\frac{frec\_distance}{diameters}$**
+
+  ![image-20230915164712686](OUTPUT4.png)
+
+  **`Hausdorff距离`**
+
+  ![image-20230915164940331](OUTPUT5.png)
+
+  **Hausdorff距离（标准形式）=$1000*\frac{Hausdorff\_distance}{diameters}$**
+
+  ![image-20230915165134361](OUTPUT6.png)
