@@ -10,7 +10,7 @@ An example of one comparison is shown below:
 
 ![image-20230826161420503](image-20230826161420503.png)
 
-We were able to find that by simply reversing deep learning, we were able to get the original approximate path back from the output of a commonly used deep learning network.
+We can find that by simply reversing deep learning, we are able to get the original approximate path back from the output of a commonly used deep learning network.
 
 ## Experimental validation
 
