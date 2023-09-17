@@ -40,6 +40,14 @@ In order to further quantitatively verify the effectiveness of the reversal netw
 
   ![image-20230915165134361](OUTPUT6.png)
 
+## Data and Embedding Model Source
+```
+D. Yao, G. Cong, C. Zhang and J. Bi, "Computing Trajectory Similarity in Linear Time: A Generic Seed-Guided Neural Metric Learning Approach," 2019 IEEE 35th International Conference on Data Engineering (ICDE), Macao, China, 2019, pp. 1358-1369, doi: 10.1109/ICDE.2019.00123. (NEUTRAJ) <br>
+X. Li, K. Zhao, G. Cong, C. S. Jensen and W. Wei, "Deep Representation Learning for Trajectory Similarity Computation," 2018 IEEE 34th International Conference on Data Engineering (ICDE), Paris, France, 2018, pp. 617-628, doi: 10.1109/ICDE.2018.00062. (t2vec)<br>
+Peng Han, Jin Wang, Di Yao, Shuo Shang, and Xiangliang Zhang. 2021. A Graph-based Approach for Trajectory Similarity Computation in Spatial Networks. In Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery &amp; Data Mining (KDD '21). Association for Computing Machinery, New York, NY, USA, 556–564. https://doi.org/10.1145/3447548.3467337 (GTS)<br>
+```
+
+
 # 科研项目：车辆行驶轨迹向量的逆转
 
 
